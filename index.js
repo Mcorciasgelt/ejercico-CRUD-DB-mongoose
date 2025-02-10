@@ -26,7 +26,7 @@ const app = express();
 const PORT = 8080;
 
 app.use(express.json()); // Permitir JSON en el body
-app.use("/tasks", tasksRoutes); // Usamos las rutas de tareas
+app.use("/", tasksRoutes); // Usamos las rutas de tareas
 
 mongoose
   .connect(process.env.MONGO_URI)
